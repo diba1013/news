@@ -1,16 +1,20 @@
 {
 	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
+		"composite": true,
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"noEmit": true,
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
 		"baseUrl": ".",
-		"lib": ["ESNext"],
 		"paths": {
 			"@/*": ["src/*"]
-		}
+		},
 	},
-	"include": [
-		"src/**/*.ts",
-		"test/**/*.ts",
-		"tscz.config.ts",
-		"vitest.config.ts"
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "test/*.ts"],
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		}
 	]
 }

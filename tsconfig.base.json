@@ -2,12 +2,18 @@
 	"compilerOptions": {
 		"target": "esnext",
 		"module": "esnext",
-		"moduleResolution": "Node",
+		"skipLibCheck": true,
+		"useDefineForClassFields": true,
+		"moduleResolution": "Bundler",
 		"resolveJsonModule": true,
 		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
 		"strict": true,
 		"noImplicitOverride": true,
-		"esModuleInterop": true,
-		"isolatedModules": true
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"noErrorTruncation": true
 	}
 }
